@@ -1,0 +1,33 @@
+{
+    "name": "jawhar-store-backend",
+    "version": "1.0.0",
+    "description": "Backend API for Jawhar Store - E-commerce platform",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "seed": "node scripts/seed.js"
+    },
+    "keywords": [
+        "express",
+        "sqlite",
+        "ecommerce",
+        "api"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.2",
+        "multer": "^2.0.2",
+        "pg": "^8.17.1",
+        "sqlite3": "^5.1.7"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2"
+    }
+}

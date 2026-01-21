@@ -1,0 +1,107 @@
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: var(--z-modal);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.auth-modal {
+    position: relative;
+    max-width: 450px;
+    width: 90%;
+    padding: var(--space-3xl);
+    border-radius: var(--radius-2xl);
+    animation: slideInDown 0.4s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.auth-modal-close {
+    position: absolute;
+    top: var(--space-lg);
+    left: var(--space-lg);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--gray-700);
+    transition: all var(--transition-base);
+}
+
+.auth-modal-close:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(90deg);
+}
+
+.auth-modal-content {
+    text-align: center;
+}
+
+.auth-modal-icon {
+    font-size: 4rem;
+    margin-bottom: var(--space-lg);
+    animation: pulse 2s infinite;
+}
+
+.auth-modal h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--gray-900);
+    margin-bottom: var(--space-md);
+}
+
+.auth-modal p {
+    font-size: var(--font-size-md);
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: var(--space-2xl);
+}
+
+.auth-modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.auth-modal-actions .btn {
+    width: 100%;
+    font-size: var(--font-size-lg);
+    padding: var(--space-lg);
+}
+
+@media (max-width: 480px) {
+    .auth-modal {
+        padding: var(--space-2xl);
+    }
+
+    .auth-modal h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .auth-modal p {
+        font-size: var(--font-size-sm);
+    }
+}
