@@ -4,6 +4,7 @@ import { FiSearch, FiShoppingCart, FiHeart, FiUser, FiLogOut, FiMenu, FiX, FiSet
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
 import { useAuth } from '../context/AuthContext';
+import logo from '../images/logo.jpeg';
 
 const Header = ({ onSearchChange, searchQuery }) => {
     const navigate = useNavigate();
@@ -31,8 +32,10 @@ const Header = ({ onSearchChange, searchQuery }) => {
                 <div className="flex items-center justify-between gap-4">
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-gray-800 dark:text-white group">
-                        <span className="text-3xl group-hover:scale-110 transition-transform">👜</span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Bag Store</span>
+                        <span className="text-3xl group-hover:scale-110 transition-transform">
+                            <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" />
+                        </span>
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Beta Medical</span>
                     </Link>
 
                     {/* Desktop Navigation */}

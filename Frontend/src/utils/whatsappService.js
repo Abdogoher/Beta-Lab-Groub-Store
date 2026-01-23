@@ -6,7 +6,7 @@
 export const formatOrderMessage = (cart, customerInfo, total) => {
     const { fullName, phone, address } = customerInfo;
 
-    let message = `🛍️ *طلب جديد من متجر جوهر*\n\n`;
+    let message = `🛍️ *طلب جديد من متجر Beta Medical*\n\n`;
     message += `👤 *العميل:* ${fullName}\n`;
     message += `📱 *الهاتف:* ${phone}\n`;
     message += `📍 *العنوان:* ${address}\n\n`;
@@ -21,7 +21,7 @@ export const formatOrderMessage = (cart, customerInfo, total) => {
 
     message += `━━━━━━━━━━━━━━━\n`;
     message += `💰 *الإجمالي الكلي:* ${total} ج.م\n\n`;
-    message += `✨ شكراً لتسوقك من جوهر`;
+    message += `✨ شكراً لتسوقك من Beta Medical`;
 
     return message;
 };
@@ -39,4 +39,4 @@ export const sendWhatsAppOrder = (cart, customerInfo, total, phoneNumber) => {
 };
 
 // رقم واتساب افتراضي - يمكن تغييره
-export const STORE_WHATSAPP_NUMBER = '201004559750'; // غير هذا الرقم لرقمك الفعلي
+export const STORE_WHATSAPP_NUMBER = '201093177862'; // غير هذا الرقم لرقمك الفعلي
