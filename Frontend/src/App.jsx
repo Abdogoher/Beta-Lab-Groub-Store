@@ -17,6 +17,7 @@ import { CartProvider, useCart } from './context/CartContext';
 import { WishlistProvider } from './context/WishlistContext';
 
 import SearchResults from './components/SearchResults';
+import About from './pages/About';
 
 function AppContent() {
     const { showAuthPrompt, setShowAuthPrompt } = useCart();
@@ -38,6 +39,7 @@ function AppContent() {
                         <Route path="/" element={<Home />} />
                         <Route path="/products" element={<Products searchQuery={searchQuery} />} />
                         <Route path="/cart" element={<Cart />} />
+                        <Route path="/about" element={<About />} />
                         <Route path="/checkout" element={<Checkout />} />
                         <Route path="/wishlist" element={<Wishlist />} />
                         <Route path="/login" element={<Login />} />

@@ -33,7 +33,7 @@ const Header = ({ onSearchChange, searchQuery }) => {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-gray-800 dark:text-white group">
                         <span className="text-3xl group-hover:scale-110 transition-transform">
-                            <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" />
+                            <img src={logo} alt="Logo" className="w-8 h-8 rounded-full" />
                         </span>
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">Beta Medical</span>
                     </Link>

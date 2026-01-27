@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import HeroSlider from '../components/HeroSlider';
 import ProductCard from '../components/ProductCard';
+import Offers from '../components/Offers';
 import { productsAPI } from '../services/api';
+import Buy from '../components/Buy';
 
 const Home = () => {
     const [bestSellers, setBestSellers] = useState([]);
@@ -46,8 +48,11 @@ const Home = () => {
                             ))}
                         </div>
                     )}
+                    <Offers />
                 </section>
+
             </div>
+            <Buy />
         </div>
     );
 };

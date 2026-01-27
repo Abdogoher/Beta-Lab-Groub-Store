@@ -37,10 +37,10 @@ const HeroSlider = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">
                                 <div className="container mx-auto px-4 md:px-8">
                                     <div className="max-w-xl text-white">
-                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 leading-tight animate-fade-in-up">
+                                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 leading-tight animate-fade-in-up text-slate-700">
                                             {slide.title}
                                         </h1>
-                                        <p className="text-lg md:text-xl text-gray-200 mb-8 font-light leading-relaxed animate-fade-in-up delay-100">
+                                        <p className="text-lg md:text-xl text-blue-500 mb-8 font-light leading-relaxed animate-fade-in-up delay-100">
                                             {slide.subtitle}
                                         </p>
                                         <button

@@ -1,4 +1,4 @@
-import { dbRun } from './postgres.js';
+import { dbRun } from "./postgres.js";
 
 export const initializePostgres = async () => {
   try {
@@ -101,9 +101,25 @@ export const initializePostgres = async () => {
       )
     `);
 
-    console.log('✅ PostgreSQL database tables initialized successfully');
+    // create offers table
+    await dbRun(`
+      CREATE TABLE IF NOT EXISTS offers (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        image_url TEXT,
+        original_price DECIMAL(10, 2) NOT NULL,
+        discounted_price DECIMAL(10, 2) NOT NULL,
+        discount_percentage INTEGER GENERATED ALWAYS AS (
+          ROUND(((original_price - discounted_price) / original_price * 100)::numeric, 0)::integer) STORED,
+        start_date TIMESTAMP NOT NULL,
+        end_date TIMESTAMP NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+
+    console.log("✅ PostgreSQL database tables initialized successfully");
   } catch (error) {
-    console.error('❌ Error initializing PostgreSQL database:', error);
+    console.error("❌ Error initializing PostgreSQL database:", error);
     throw error;
   }
 };
